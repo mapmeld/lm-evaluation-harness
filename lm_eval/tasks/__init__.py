@@ -67,6 +67,7 @@ from . import ceval
 from . import csatqa
 from . import haerae
 from . import cmmlu
+from . import indonlu
 
 ########################################
 # Translation tasks
@@ -171,6 +172,7 @@ TASK_REGISTRY = {
     "ethics_virtue": hendrycks_ethics.EthicsVirtue,
     "truthfulqa_mc": truthfulqa.TruthfulQAMultipleChoice,
     "truthfulqa_gen": truthfulqa.TruthfulQAGeneration,
+    "indonlu": indonlu.IndoNLUBenchmark,
     # dialogue
     "mutual": mutual.MuTual,
     "mutual_plus": mutual.MuTualPlus,
