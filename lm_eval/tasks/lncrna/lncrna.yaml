@@ -1,5 +1,6 @@
 dataset_path: InstaDeepAI/plant-genomic-benchmark
-task: lncrna.z_mays
+dataset_name: lncrna.z_mays
+task: lncrna
 doc_to_text: !function utils.doc_to_text_context
 doc_to_choice: !function utils.doc_to_choice
 validation_split: null
