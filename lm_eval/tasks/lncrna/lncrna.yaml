@@ -1,0 +1,15 @@
+dataset_path: InstaDeepAI/plant-genomic-benchmark
+task: lncrna.z_mays
+doc_to_text: !function utils.doc_to_text_context
+doc_to_choice: !function utils.doc_to_choice
+validation_split: null
+test_split: test
+fewshot_split: test
+output_type: multiple_choice
+doc_to_target: label
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.0
