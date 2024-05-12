@@ -1,5 +1,7 @@
 from typing import List
 
+qed = "∎" # from math symbols
+
 def doc_to_text_context(doc) -> str:
     sequence = doc["sequence"]
     return f"""Is the following sequence long non-coding RNA (LncRNA)?
@@ -9,6 +11,14 @@ def doc_to_text_context(doc) -> str:
 
 ### Answer:\n"""
 
+def doc_to_biotoken_context(doc) -> str:
+    sequence = "".join([f"{qed}{nt}" for nt in doc["sequence"]])
+    return f"""Is the following sequence long non-coding RNA (LncRNA)?
+
+### Sequence:
+{sequence}
+
+### Answer:\n"""
 
 def doc_to_choice(doc) -> List[str]:
     return ["No", "Yes"]
