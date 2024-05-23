@@ -825,6 +825,8 @@ class HFLM(TemplateLM):
             stopping_criteria=stopping_criteria,
             pad_token_id=self.tokenizer.pad_token_id,
             use_cache=True,
+            # do_sample=False,
+            # temperature=0.0,
             **generation_kwargs,
         )
 
